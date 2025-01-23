@@ -1,3 +1,5 @@
+
+
 public class BubbleSort {
     /**
      * Sorts the given array using the Bubble Sort algorithm.
@@ -10,6 +12,20 @@ public class BubbleSort {
      */
     public void sort (Comparable[] a){
 //        write your code here.
+        int n = a.length;
+        boolean swapped = false;
+
+        do {
+            swapped = false;
+            for(int i = 1; i < a.length; i++) {
+                if( (a[i - 1]).compareTo(a[i]) > 0 ) {
+                    swap(a, i - 1 , i);
+                    swapped = true;
+                }
+            }
+            n--;
+        } while (swapped);
+
 
     }
     /**
